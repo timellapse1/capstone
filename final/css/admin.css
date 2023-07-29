@@ -1,0 +1,277 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #387F53;
+}
+.left{
+    height: 100vh;
+    width: 15%;
+    background-color: #387F53;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: .5em;
+}
+.top-side{
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.top-side img{
+    width: 30%;
+    padding: 1%;
+    border-radius: 100px;
+    margin-top: 5%;
+    margin-left: 5%;
+    border: 2.5px solid white;
+    justify-content: center;
+    object-fit: contain;
+}
+.top-side p{
+    gap: .5%;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 5%;
+    font-style: italic;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+}
+.cal{
+    font-weight: bold;
+    font-style: normal;
+}
+.left a{
+    color: white;
+    padding: 5%;
+    text-decoration: none;
+    justify-content:space-around;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.left a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* drop-down */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    color: red;
+    text-align: center;
+  }
+  
+  li a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  li a:hover {
+    background-color: grey;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* right side */
+.right{
+    width: 85%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 15%;
+    border: solid red;
+} 
+.one{
+    width: 49%;
+    height: 100vh;
+    text-align: center;
+    background-color: white;
+}
+.two{
+    width: 49%;
+    height: 100vh;
+    text-align: center;
+    background-color: white;
+}
+
+@media(max-width:1025px){
+header{
+    width: 100%;
+    height: 20%;
+    margin-top: 10%;
+    color: #387F53;
+} 
+}
+@media(max-width:1281px){
+    .top-side img{
+        width: 20%;
+    }
+    .top-side p{
+        font-size: 1.5rem;
+    }
+    .left a{
+        font-size: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border: solid red;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+    border: solid red;
+}
+td,
+th {
+padding: 5px 5px;
+text-align: center;
+}
+
+th {
+background-color: #584e46;
+color: #fafafa;
+font-family: 'Open Sans', Sans-serif;
+font-weight: bold;
+}
+
+tr {
+width: 50%;
+background-color: #fafafa;
+font-family: 'Montserrat', sans-serif;
+}
+
+tr:nth-child(even) {
+background-color: #eeeeee;
+}
+
+
+
+/* modal */
+.cont-modal{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.397);
+    z-index: 1;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+
+    & .modal{
+        height: 60%;
+        width: 50%;
+        background-color: #8d0000;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: relative; 
+        padding: 5%;
+    }
+
+    & form{
+        border: solid red;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* Hide the default file input */
+    & input[type="file"]{
+        display: none;
+  }
+    
+}
+
+
+
+
+
+/* .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    color: #fff;
+    background-color:#584e46;
+  }
+  
+  .openbtn:hover {
+    color: #ECDAC9;
+  } */

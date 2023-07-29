@@ -1,0 +1,151 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    height: 100%;
+    width: 100%;
+}
+header{
+    height: 10%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5em;
+    padding-left: 4%;
+    color: #245D3A;
+    font-size: 1.5rem;
+
+     & .one{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        width: 30%;
+        gap: 2%;
+        border: solid red;
+
+        & .yellow{
+            height: 10%;
+            width: 4%;
+            background-color: #FF961A;
+        }
+        & h1{
+            font-weight: 800;
+        }
+        & p{
+            font-weight: 500;
+            font-size: 1rem;
+        }
+     }
+
+    & .option{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border: 1px solid violet;
+
+        & .two{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 5%;
+            height: 100%;
+            width: max-content;
+            border: solid blue;
+    
+            & p{
+                margin: 0%;
+            }
+        }
+        
+        & .three{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 5%;
+            height: 100%;
+            width: 20%;
+        }
+    }
+}
+
+/* Basic styling for the input field and icon container */
+.input-group {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .input-field {
+    padding: 10px 30px 10px 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 85%;
+  }
+  
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  /* Adjust the size and color of the icon */
+  .input-icon i {
+    font-size: 18px;
+    color: #999;
+  }
+  
+
+
+
+/* modal */
+.cont-modal{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.397);
+    z-index: 1;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+
+    & .modal{
+        height: 60%;
+        width: 50%;
+        background-color: #8d0000;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: relative; 
+        padding: 5%;
+    }
+
+    & form{
+        border: solid red;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* Hide the default file input */
+    & input[type="file"]{
+        display: none;
+  }
+    
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit movie</title>
+    <link rel="stylesheet" href="movieAdmin.css">
+
+    <!-- icon -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="one">
+            <div class="yellow"></div>
+            <h1>Movies</h1>
+            <p>15, 168 total</p>
+        </div>
+        <div class="option">
+            <div class="two">
+                <p>Sort by:</p>
+                <select name="" id="">
+                    <option value="">Date created </option>
+                    <option value="">Newest</option>
+                </select>
+            </div>
+            <div class="three">
+                <div class="input-group">
+                    <input type="text"class="input-field">
+                    <span class="input-icon"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <table class="table" >
+        <thead>
+        <tr>
+            <th class="text-center">S.N.</th>
+            <th class="text-center">Movie Video</th>
+            <th class="text-center">Movie Poster(portrait)</th>
+            <th class="text-center">Movie Poster(landScape)</th>
+            <th class="text-center">Movie Title</th>
+            <th class="text-center">Sypnosis</th>
+            <th class="text-center">Genre</th>
+            <th class="text-center">Cast</th>
+            <th class="text-center">Director</th>
+            <th class="text-center">Running Time</th>
+            <th class="text-center" colspan="2">Action</th>
+        </tr>
+        </thead>
+        
+        <tr>
+        <td><?=$count?></td>
+        <td><?=$row["movie_video"]?></td>
+        <td><?=$row["movie_posterP"]?></td>
+        <td><?=$row["movie_posterL"]?></td>
+        <td><?=$row["movie_title"]?></td>
+        <td><?=$row["movie_sypnosis"]?></td>
+        <td><?=$row["movie_genre"]?></td>      
+        <td><?=$row["movie_cast"]?></td> 
+        <td><?=$row["movie_director"]?></td> 
+        <td><?=$row["movie_time"]?></td>  
+        <td><button class="btn btn-primary" style="height:40px">Edit</button></td>
+        <td><button class="btn btn-danger" style="height:40px">Delete</button></td>
+        </tr>
+    </table>
+
+  <!-- for modal -->
+  <button  onclick="openModal()" type="button" style="height:40px">
+    Add movie
+  </button>
+
+  <!-- modal -->
+    <div class="cont-modal">
+        <div class="modal">
+                <h1>Complet form to add movie</h1>
+                <form action="">
+                    <label for="fileInput" class="custom-file-input">
+                        Choose a file:
+                        <input type="file" id="fileInput" name="fileInput">
+                    </label>
+                    <input type="file" placeholder="video" accept="video/mp4">
+                    <input type="file" accept="image/jpeg, jpg ,png">
+                    <input type="file" accept="image/jpeg, jpg ,png">
+                    <label for="">Title</label>
+                    <input type="text" placeholder="">
+                    <label for="">Sypnosis</label>
+                    <input type="text" placeholder="">
+                    <label for="">Genre</label>
+                    <input type="text" placeholder="">
+                    <label for="">Cast</label>
+                    <input type="text" placeholder="">
+                    <label for="">Director</label>
+                    <input type="text" placeholder="">
+                    <label for="">Time</label>
+                    <input type="text" placeholder="">
+                </form>
+        </div>
+
+    </div>
+
+
+</div>
+<script src="js/admin.js" defer></script>
+<script src="movie.js"></script>
+</body>
+</html>

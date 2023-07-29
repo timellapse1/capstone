@@ -1,0 +1,27 @@
+/* Hide the default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Style the custom file input label */
+.custom-file-input {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Change the label appearance when hovering */
+.custom-file-input:hover {
+  background-color: #e1e1e1;
+}
+
+/* Change the label appearance when the file input is focused */
+.custom-file-input:focus {
+  outline: none;
+  border-color: #007bff; /* Change the color to your preferred focus color */
+}

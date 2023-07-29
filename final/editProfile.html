@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editProfile</title>
+    <link rel="stylesheet" href="css/editProfile.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="top"></div>
+            <h3>User Management</h3>
+        </header>
+        <div class="outer-box">
+            <img class="btn" src="image/icon/backBTN.png" alt="">
+            <div class="left">
+                <img src="image/profile.png" alt="">
+            </div>
+            <div class="right">
+                <h3>User Account Information</h3>
+                <form action="">
+                    <label for="username">Username:</label>
+                    <input type="text" placeholder="juanDelaCruz" name="" id="">
+                    <label for="email">Email:</label>
+                    <input type="text" placeholder="juanDelaCruz@bulsu.edu.com" name="" id="">
+                    <label for="password">Password:</label>
+                    <input type="password" placeholder="**********" name="" id="">
+                    <div class="actions">
+                        <button>Edit profile</button>
+                        <button onclick="openModal()">Change Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+<!-- Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Set up your new password</h3>
+            <form action="">
+                <input type="password" placeholder="Confirm your old password" id="" name="">
+                <input type="password" placeholder="Enter new password" id="" name="">
+                <input type="password" placeholder="Confirm your new password" id="" name="">
+                <div class="actions">
+                    <button onclick="closeModal()">Cancel</button>
+                    <button>Save Changes</button>
+                </div>
+            </form>
+            </div>
+        </div>
+  
+    </div>
+    
+</body>
+<script>
+    // Function to open the modal
+function openModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+</script>
+</html>

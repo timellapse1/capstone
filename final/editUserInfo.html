@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account Info</title>
+    <link rel="stylesheet" href="css/editUserInfo.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,900;1,200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="yellow"></div>
+            <h3>User Management</h3>
+        </header>
+        <!-- Main box -->
+        <div class="box">
+            <!-- Back button -->
+            <img class="back" src="https://drive.google.com/uc?export=view&id=1LaNs2Av-B5DVnU4j-UZyTbqf5mI-2vx9" alt="backButton">
+        
+            <!-- modal-change-pic -->
+            <div class="modal-background" id="modalBackground">
+                <div class="modal-content">
+                  <span class="close-btn" >
+                    <img src="https://drive.google.com/uc?export=view&id=1optTAoE-8MyjIj4hEIRZxqm1t82mJg8B" alt="&times;"onclick="closeModal()">
+                  </span>
+                  <div class="dragPic" id="dropArea" ondragover="allowDrop(event)" ondrop="handleDrop(event)">
+                    <img src="image/icon/drag&drop.png" alt="">
+                    <p>Drag and Drop files here or <span class="underline"> click here</span> <br>to upload new profile picture.</p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="box__user">
+                <!-- Profile image -->
+                <div class="user__images">
+                    <img onclick="openModal()" src="https://drive.google.com/uc?export=view&id=1hZ1HUR5uuIWyoiVvX5-2fjm0zMqbEQQq" alt="">
+                </div>
+                <!-- Form -->
+                <div class="user__user">
+                    <h2>User Account Information</h2>
+                    <form class="default__form">
+                        <div class="one">
+                            <label for="">Username:</label>
+                            <input type="text" name="username" placeholder="Ex. Juan_hubo123" disabled>
+                        </div>
+                        <div class="two">
+                            <label for="">Email:</label>
+                            <input type="email" name="email" placeholder="juan_delacruz@bulsu.edu.com" disabled>
+                        </div>
+
+                        <div class="three">
+                            <label for="">Password:</label>
+                            <input type="password" name="password" id="pass" placeholder="**********(click change password to change password)" disabled>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="actions">
+                            <button type="button" onclick="onEdit()">Edit Profile</button>
+                            <button type="button" onclick="modal()">Change Password</button>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="actions-hid">
+                            <button type="button" onclick="cancelEdit()">Cancel</button>
+                            <button type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="set-pass">
+            <div class="modal">
+                <img src="https://drive.google.com/uc?export=view&id=1optTAoE-8MyjIj4hEIRZxqm1t82mJg8B" alt="close" onclick="modal()">
+                <h2>Set up your new password</h2>
+                <form action="">
+                    <input type="text" name="oldPass" placeholder="Confirm your old password">
+                    <input type="text" name="nPass" placeholder="Enter a new password">
+                    <input type="text" name="confirmPass" placeholder="Confirm your new password">
+
+                    <div class="changes">
+                        <button type="button" onclick="modal()">Cancel</button>
+                        <button type="button">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="js/editUserInfo.js"></script>
+
+</body>
+</html>
